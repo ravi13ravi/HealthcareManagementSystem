@@ -17,6 +17,7 @@ function App() {
           <Route path="/dashboard" component={Dashboard} />
           <Route path="/freebook" component = {Home} />
           <Route path="/facebook" component = {Login} />
+          <Route path="/google" component = {Register} />
         </Switch>
       </div>
     </Router>
