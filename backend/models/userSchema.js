@@ -25,11 +25,11 @@ const userSchema = new mongoose.Schema({
     minLength: [11, "Phone Number Must Contain Exact 11 Digits!"],
     maxLength: [11, "Phone Number Must Contain Exact 11 Digits!"],
   },
-  nic: {
+  aadhar: {
     type: String,
-    required: [true, "NIC Is Required!"],
-    minLength: [13, "NIC Must Contain Only 13 Digits!"],
-    maxLength: [13, "NIC Must Contain Only 13 Digits!"],
+    required: [true, "Aadhar Is Required!"],
+    minLength: [12, "Aadhar Must Contain Only 12 Digits!"],
+    maxLength: [12, "Aadhar Must Contain Only 12 Digits!"],
   },
   dob: {
     type: Date,
