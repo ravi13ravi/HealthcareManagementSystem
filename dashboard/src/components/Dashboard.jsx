@@ -64,7 +64,7 @@ const Dashboard = () => {
                 </h5>
               </div>
               <p>
-                The ZeeCare dashboard for both admins and doctors offers a centralized interface for managing patient data, appointments, and operational tasks, streamlining workflows and ensuring efficient, real-time decision-making.
+                The ZeeCare dashboard for admins offers a centralized interface for managing patient data, appointments, and operational tasks, streamlining workflows and ensuring efficient, real-time decision-making.
               </p>
             </div>
           </div>
