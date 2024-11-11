@@ -64,9 +64,7 @@ const Dashboard = () => {
                 </h5>
               </div>
               <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Facilis, nam molestias. Eaque molestiae ipsam commodi neque.
-                Assumenda repellendus necessitatibus itaque.
+                The ZeeCare dashboard for both admins and doctors offers a centralized interface for managing patient data, appointments, and operational tasks, streamlining workflows and ensuring efficient, real-time decision-making.
               </p>
             </div>
           </div>
@@ -95,44 +93,44 @@ const Dashboard = () => {
             <tbody>
               {appointments && appointments.length > 0
                 ? appointments.map((appointment) => (
-                    <tr key={appointment._id}>
-                      <td>{`${appointment.firstName} ${appointment.lastName}`}</td>
-                      <td>{appointment.appointment_date.substring(0, 16)}</td>
-                      <td>{`${appointment.doctor.firstName} ${appointment.doctor.lastName}`}</td>
-                      <td>{appointment.department}</td>
-                      <td>
-                        <select
-                          className={
-                            appointment.status === "Pending"
-                              ? "value-pending"
-                              : appointment.status === "Accepted"
+                  <tr key={appointment._id}>
+                    <td>{`${appointment.firstName} ${appointment.lastName}`}</td>
+                    <td>{appointment.appointment_date.substring(0, 16)}</td>
+                    <td>{`${appointment.doctor.firstName} ${appointment.doctor.lastName}`}</td>
+                    <td>{appointment.department}</td>
+                    <td>
+                      <select
+                        className={
+                          appointment.status === "Pending"
+                            ? "value-pending"
+                            : appointment.status === "Accepted"
                               ? "value-accepted"
                               : "value-rejected"
-                          }
-                          value={appointment.status}
-                          onChange={(e) =>
-                            handleUpdateStatus(appointment._id, e.target.value)
-                          }
-                        >
-                          <option value="Pending" className="value-pending">
-                            Pending
-                          </option>
-                          <option value="Accepted" className="value-accepted">
-                            Accepted
-                          </option>
-                          <option value="Rejected" className="value-rejected">
-                            Rejected
-                          </option>
-                        </select>
-                      </td>
-                      <td>{appointment.hasVisited === true ? <GoCheckCircleFill className="green"/> : <AiFillCloseCircle className="red"/>}</td>
-                    </tr>
-                  ))
+                        }
+                        value={appointment.status}
+                        onChange={(e) =>
+                          handleUpdateStatus(appointment._id, e.target.value)
+                        }
+                      >
+                        <option value="Pending" className="value-pending">
+                          Pending
+                        </option>
+                        <option value="Accepted" className="value-accepted">
+                          Accepted
+                        </option>
+                        <option value="Rejected" className="value-rejected">
+                          Rejected
+                        </option>
+                      </select>
+                    </td>
+                    <td>{appointment.hasVisited === true ? <GoCheckCircleFill className="green" /> : <AiFillCloseCircle className="red" />}</td>
+                  </tr>
+                ))
                 : "No Appointments Found!"}
             </tbody>
           </table>
 
-          {}
+          { }
         </div>
       </section>
     </>

@@ -48,9 +48,7 @@ const Login = () => {
         <h2>Sign In</h2>
         <p>Please Login To Continue</p>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat culpa
-          voluptas expedita itaque ex, totam ad quod error?
-        </p>
+        ZeeCare login page offers secure access to patient healthcare services.        </p>
         <form onSubmit={handleLogin}>
           <input
             type="text"

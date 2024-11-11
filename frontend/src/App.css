@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -6,54 +7,81 @@
   overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
 }
+
 body {
-  background: #e5e5e5;
+  background: linear-gradient(135deg, #f0f4ff, #e0e5f5);
+  color: #333;
+  transition: background 0.5s ease-in-out;
 }
+
+/* Buttons */
+
 .btn {
   padding: 7px 20px;
   border-radius: 12px;
   border: none;
   font-weight: bold;
   letter-spacing: 2px;
+  border: 2px solid transparent;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
 .white-btn {
   background: #fff;
-  color: #111;
+  color: #333;
 }
+
 .purple-btn {
-  background: #9083d5;
+  background: linear-gradient(135deg, #9083d5, #6454b0);;
   color: #fff;
 }
+
+/* Typography */
+
 p,
 span,
 a {
   font-size: 20px;
+  color: #444;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  color: #333;
+}
+
 h1 {
   font-size: 36px;
   font-weight: 900;
 }
-h1 {
-  font-size: 36px;
-  font-weight: 900;
-}
+
 h2 {
   font-size: 32px;
   font-weight: 900;
 }
+
 h3 {
   font-size: 28px;
   font-weight: 900;
 }
+
 h4 {
   font-size: 24px;
   font-weight: 900;
 }
+
 h5,
 h6 {
   font-size: 24px;
   font-weight: 700;
 }
+
 @media (max-width: 1186px) {
   h1 {
     font-size: 32px;
@@ -67,52 +95,68 @@ h6 {
 .container {
   padding: 0 100px;
 }
+
 @media (max-width: 700px) {
   .container {
     padding: 0 20px;
   }
 }
+
+/* Hero Section */
+
 .hero {
   display: flex;
   gap: 50px;
   padding-top: 120px;
   padding-bottom: 120px;
   position: relative;
+  background: linear-gradient(135deg, #dedaf6, #b0a4ee);
+  color: #fff;
 }
+
 .hero .banner {
   flex: 1;
 }
+
 .hero .banner h1,
 .hero .banner p {
   max-width: 650px;
 }
+
 .hero .banner h1 {
   letter-spacing: 2px;
   word-spacing: 5px;
   font-size: 40px;
 }
+
 .hero .banner p {
   color: #111;
   letter-spacing: 2px;
 }
+
 .hero .banner span {
   position: absolute;
   right: -300px;
   top: -200px;
   z-index: -1;
+  opacity: 0.2;
+  transform: rotate(15deg);
 }
+
 .hero .banner:first-child {
   display: flex;
   justify-content: center;
   flex-direction: column;
   gap: 50px;
 }
+
 .hero .banner:last-child {
   display: flex;
   justify-content: center;
   align-items: center;
   overflow-y: hidden;
 }
+
 .animated-image {
   animation: moveUpDown 1s infinite alternate ease-in-out;
 }
@@ -125,6 +169,7 @@ h6 {
     transform: translateY(20px);
   }
 }
+
 @media (max-width: 1186px) {
   .hero .banner span {
     right: -400px;
@@ -133,12 +178,14 @@ h6 {
     font-size: 32px;
   }
 }
+
 @media (max-width: 1085px) {
   .hero .banner span {
     right: -480px;
     top: -315px;
   }
 }
+
 @media (max-width: 925px) {
   .hero {
     flex-direction: column;
@@ -149,34 +196,46 @@ h6 {
     }
   }
 }
+
+/* Form Components */
+
 .form-component {
   padding-top: 40px;
   padding-bottom: 60px;
+  background: #f5f5fa;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
+
 .form-component h2 {
   color: gray;
   letter-spacing: 4px;
   margin-bottom: 30px;
 }
+
 .form-component h4 {
   color: gray;
   font-weight: 700;
   margin-bottom: 20px;
 }
+
 .form-component p {
   max-width: 750px;
   color: gray;
   margin-bottom: 20px;
 }
+
 .form-component form {
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
+
 .form-component form div {
   display: flex;
   gap: 30px;
 }
+
 .form-component form input,
 .form-component form select,
 .form-component form textarea {
@@ -185,7 +244,15 @@ h6 {
   padding: 10px 10px 10px 40px;
   border-radius: 7px;
   border: 1px solid gray;
+  transition: border-color 0.3s ease;
 }
+
+.form-component form input:focus,
+.form-component form select:focus,
+.form-component form textarea:focus {
+  border-color: #6454b0;
+}
+
 .form-component button {
   padding: 10px 35px;
   color: #fff;
@@ -196,37 +263,47 @@ h6 {
   font-size: 24px;
   margin-bottom: 30px;
   background: linear-gradient(140deg, #9083d5, #271776ca);
+  cursor: pointer;
 }
+
 .form-component .wrapper {
   display: flex;
   gap: 50px;
 }
+
 .form-component .wrapper .banner {
   flex: 1;
 }
+
 .form-component .wrapper .banner:last-child {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .form-component .wrapper .banner:last-child img {
   max-width: 450px;
 }
+
 .login-form {
   margin: 100px auto 20px auto;
   max-width: 800px;
   text-align: center;
 }
+
 .register-form {
   max-width: 1200px;
   margin: 100px auto 20px auto;
 }
+
 .login-form h2 {
   color: #000;
 }
+
 .register-form h2 {
   color: #000;
 }
+
 @media (max-width: 1110px) {
   .appointment-form form div:nth-child(4) {
     flex-direction: column;
@@ -235,6 +312,7 @@ h6 {
     flex-direction: column;
   }
 }
+
 @media (max-width: 888px) {
   .form-component {
     padding-top: 30px;
@@ -244,6 +322,7 @@ h6 {
     flex-direction: column;
   }
 }
+
 @media (max-width: 667px) {
   .form-component form input,
   .form-component form select,
@@ -252,45 +331,54 @@ h6 {
     padding: 10px;
   }
 }
+
 .biography {
   display: flex;
   gap: 50px;
   padding-top: 40px;
   padding-bottom: 60px;
 }
+
 .biography .banner:first-child {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .biography .banner:last-child {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
+
 .biography .banner h3 {
   font-weight: 700;
   letter-spacing: 3px;
 }
+
 .biography .banner p:first-child {
   font-size: 24px;
   letter-spacing: 2px;
 }
+
 @media (max-width: 925px) {
   .biography {
     flex-direction: column-reverse;
   }
 }
+
 .message-form {
   position: relative;
 }
+
 .message-form h2 {
   text-align: center;
   color: #000;
   position: relative;
 }
+
 .message-form img {
   position: absolute;
   top: 0;
@@ -305,15 +393,23 @@ h6 {
     top: 10%;
   }
 }
+
+/* Footer */
+
 footer {
   padding-bottom: 30px !important;
+  background: #f8f8fb;
+  color: #444;
 }
+
 footer hr {
   margin-bottom: 30px;
 }
+
 footer .content {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 footer .content div {
   flex: 1;
@@ -324,6 +420,7 @@ footer .content div:nth-child(3) {
 footer .content div h4 {
   font-weight: 700;
   margin-bottom: 20px;
+  color: #6454b0;
 }
 footer .content div ul {
   display: flex;
@@ -331,11 +428,11 @@ footer .content div ul {
   gap: 10px;
 }
 footer .content div ul a {
-  color: gray;
+  color: #666;
   text-decoration: none;
 }
 footer .content div ul a:hover {
-  color: #8570ed;
+  color: #6454b0;
   transition: 0.3s;
 }
 footer .content div ul li span {
@@ -391,6 +488,9 @@ footer .content div:last-child div svg {
   color: gray;
   margin-bottom: 30px;
 }
+
+/* Card Styles */
+
 .card {
   position: relative;
   border-radius: 8px;
@@ -404,6 +504,7 @@ footer .content div:last-child div svg {
   min-height: 360px;
   margin: 0 10px;
   text-decoration: none;
+  font-size: 500px;
 }
 .card img {
   position: absolute;
@@ -428,7 +529,8 @@ footer .content div:last-child div svg {
   font-weight: 700;
 }
 
-/**********************************************************************************************************************/
+/* Navigation */
+
 nav {
   display: flex;
   width: 100%;
@@ -440,14 +542,19 @@ nav {
   border-bottom-left-radius: 7px;
   padding-top: 20px !important;
   padding-bottom: 20px !important;
-  z-index: 2;
+  z-index: 1000;
+  background: #62b5d8;
+  color: #fff;
+  top: 0;
 }
+
 nav .logo {
   flex: 1;
   display: flex;
   align-items: center;
   font-size: 2rem;
 }
+
 nav .navLinks {
   flex: 2;
 }
@@ -466,7 +573,9 @@ nav .navLinks .links a {
   font-size: 20px;
   font-weight: 600;
   letter-spacing: 1.4px;
+  transition: color 0.3s;
 }
+
 nav .navLinks .links a:hover {
   color: #000;
   transition: 0.3s;
